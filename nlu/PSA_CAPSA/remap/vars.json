@@ -1,0 +1,15 @@
+{ "vars" :
+	{
+		"providerMapping" : [{
+			"amazon.com" : "amazon",
+			"www.amazon.com" : "amazon",
+			"bing.com" : "bing",
+			"www.bing.com" : "bing",
+			"yahoo.com" : "yahoo",
+			"www.yahoo.com" : "yahoo",
+			"google.com" : "google",
+			"www.google.com" : "google",
+			"_default" : "*"
+			}]
+	}
+}

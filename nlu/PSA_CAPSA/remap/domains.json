@@ -1,0 +1,23 @@
+{
+	"vars" : {
+		"UDE_DOMAIN" : {
+			"BUSINESS" : ["SEARCH"],
+			"BUSINESS_GAS" : ["SEARCH"],
+			"BUSINESS_OTHER" : ["SEARCH"],
+			"BUSINESS_PARKING" : ["SEARCH"],
+			"BUSINESS_UNCATEGORIZED" : ["SEARCH"],
+			"MAPSEARCH" : ["SEARCH", "DIRECTIONS", "UPLOAD"],
+			"POI" : ["ANAPHORA"]
+		},
+		"OTHER_DOMAINS" : {
+			"APPL" : ["LAUNCH"],
+			"INTERNETRADIO" : ["PLAY"],
+			"MUSIC" : ["CANCEL","PAUSE","PLAY","RESET","RESUME","STREAM","TURNOFF","TURNON"],			
+			"NEWS" : ["READ","SEARCH"],
+			"WEATHER" : ["REQUEST"],
+			"UNSUPPORTED" : ["UNSUPPORTED"]
+		}
+	},
+	"domains" : "${UDE_DOMAIN}${OTHER_DOMAINS}"
+}
+
