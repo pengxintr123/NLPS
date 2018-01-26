@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xml:lang="en-US" version="1.0" root="auto_main" mode="voice" xmlns="http://www.w3.org/2001/06/grammar">
+<rule id="auto_main" scope="public">
+	<item>
+		<ruleref uri="#customization"/>
+		<tag>
+		_MAPPASS_Domain = 'SampleAbstractDomain';
+		_MAPPASS_Intention = 'SampleAbstractIntention';
+		_MAPPASS_SampleAbstractSlot1 = 'SampleValueForSampleAbstractSlot1';
+		_MAPPASS_SampleAbstractSlot2 = "SampleValueForSampleAbstractSlot2: This is the text that matched the rule '" + customization.SWI_literal +"'";
+		_MAPPASS_PS_CUSTOM  = 'true';
+		_MAPPASS_Intent = 'customization';
+		</tag>
+	</item>
+</rule>
+<rule id="customization" scope="public">
+	<one-of>
+		<item>custom grxml text one</item>
+		<item>custom grxml text two</item>
+	</one-of>
+</rule>
+</grammar>

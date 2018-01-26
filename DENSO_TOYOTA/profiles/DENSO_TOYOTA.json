@@ -1,0 +1,19 @@
+{
+	"VERSION" : "0.0.0",
+	"DENSO_TOYOTA" : {
+		"KEYS" : {
+			"application" : "DENSO_TOYOTA",
+			"dictation_language" : "(cmn-CHN)",
+			"dictation_type" : "ccpoi_nav"
+		},
+		"ZEPPELINANNOTATOR":"urn:analysisEngineDescription:default?endPoint=qNVCCP_NCS51_${dictation_language}",
+		"ABSTRACT_SLOTS_SET" : "REFERENCE_AUTO_6_4_300;INCLUDE_CONFIDENCE;DENSO_TOYOTA",
+		"RESPONSE_TYPE" : "ABSTRACT_SLOTS",
+		"DOMAINS_CONTEXT":"DENSO_TOYOTA",
+		"PreprocessorAnnotatorsLocation" : "DENSO_TOYOTA",
+		"CONFIDENCECLASSIFIER" : "TRUE",
+		"CONFIGURABLE_FEATURE_SET" : "NA",
+		"TARGETED_CONTENT_PROVIDERS" : "DENSO_TOYOTA",
+		"CREDENTIALS" : "DENSO_TOYOTA"
+	}
+}

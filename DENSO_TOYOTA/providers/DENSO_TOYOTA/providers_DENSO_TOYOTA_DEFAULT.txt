@@ -1,0 +1,13 @@
+//Domain	Intention	TARGETED_CONTENT_PROVIDERS
+News	Search	NA
+UDE	Distance	NA
+UDE	Navigation	NA
+UDE	Search	NA
+UDE	Search::GasStationFinder	NA
+UDE	Search::ParkingFinder	NA
+UDE	Search::Traffic	NA
+UDE	ShowOnMap	NA
+UDE	Time::Traffic	NA
+UDE	Unspecified	NA
+Unsupported	Unsupported	NA
+Weather	Search	NA

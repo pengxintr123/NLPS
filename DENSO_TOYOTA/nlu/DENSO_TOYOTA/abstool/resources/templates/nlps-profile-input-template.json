@@ -1,0 +1,98 @@
+{
+	"map_enabledabstractslots": 
+	[
+		{
+			"_DOMAIN_SLOT_TO_USE": "nlu_classification.Domain",
+			"_INTENTION_SLOT_TO_USE": "nlu_classification.Intention",
+			"_MODE_SLOT_TO_USE": "nlu_classification.Mode",
+			"_ALWAYS" : 
+			[
+				"RESPONSE_INFO.actions[type=nlu_results].Input.Interpretations",
+				"RESPONSE_INFO.actions[type=nlu_results].Input.Type",
+				"RESPONSE_INFO.actions[type=nlu_results].api_version",
+				"RESPONSE_INFO.actions[type=nlu_results].contacts",
+				"nlu_interpretation_index",
+				"interpretation_confidence",
+				"intent_confidence",
+				"nlu_classification.Domain",
+				"nlu_classification.Intention",
+				"nlu_classification.Mode",
+				"nlu_classification.WARNING",
+				"RESPONSE_INFO.actions[1]",
+				"RESPONSE_INFO.actions[type=nlu_results].Instances[0].nlu_slots_validated"
+			]
+		},
+		<#assign domains = domainContent?keys>
+		<#list domains as domain>
+		<#assign intentionsMap = domainContent?values[domain_index].intentionsContent>
+		<#assign slotsOptions = domainContent?values[domain_index].slotsOptions>
+		<#list intentionsMap?keys as intention>
+		{
+				"domain": "${domain.domainName}",
+				"intention": "${intention.intentionName}",
+				<#if intention.mode??>
+				"mode": "${intention.mode}",
+				</#if>
+				"slots": [
+				<#if configurableFeatureSet??>
+					<#if intention.mode??>
+						<#assign featureSlots = configurableFeatureSet.getEnabledSlotsByDomainIntentionMode(domain.domainName,intention.intentionName,intention.mode)>
+					<#else>
+						<#assign featureSlots = configurableFeatureSet.getEnabledSlotsByDomainIntentionMode(domain.domainName,intention.intentionName, "")>
+					</#if>
+					<#if featureSlots?size != 0>
+						<#list featureSlots as featureSlot>
+					"${featureSlot}",
+						</#list>
+					</#if>
+				</#if>
+				<#assign intentionContent = intentionsMap?values[intention_index]>
+				<#assign intentionAbstractSlots = intentionContent.slotsList>
+				<#list intentionAbstractSlots as intentionAbstractSlot>
+				<#if intentionAbstractSlot.slotKey != "">
+					<#if intentionAbstractSlot.slotType??>
+					"${intentionAbstractSlot.slotType}.${intentionAbstractSlot.slotKey}"
+					<#else>
+						<#if intentionAbstractSlot.canonicalFormat??>
+					"nlu_slot_details.${intentionAbstractSlot.slotKey}.literal","nlu_slot_details.${intentionAbstractSlot.slotKey}.canonical"<#rt>
+						<#else>
+					"nlu_slot_details.${intentionAbstractSlot.slotKey}.literal"<#rt>
+						</#if>
+						<#if slotsOptions[intentionAbstractSlot.slotKey]??>
+						<#assign options = slotsOptions[intentionAbstractSlot.slotKey]>
+						<#list options as option>
+							<#if option.isNLPSInputOption == true>
+					,"nlu_slot_details.${intentionAbstractSlot.slotKey}.${option.key}"<#t>
+							</#if>
+						</#list>
+						</#if>
+					</#if>
+					<#if intentionAbstractSlot?counter != intentionAbstractSlots?size>,</#if><#lt>
+				</#if>
+				</#list>
+				],
+				"canonicals": {
+				<#assign intentionContent = intentionsMap?values[intention_index]>
+				<#assign intentionAbstractSlots = intentionContent.slotsList>
+				<#assign canonicalList = []>
+				<#list intentionAbstractSlots as intentionAbstractSlot>
+				<#if intentionAbstractSlot.slotKey != "">
+					<#if intentionAbstractSlot.canonicalFormat??>
+						<#assign format = intentionAbstractSlot.canonicalFormat>
+						<#if format.canonicalValueInProfileFormat??>
+						<#assign canonicalList = canonicalList + ["\"nlu_slot_details." + intentionAbstractSlot.slotKey + ".canonical\" : " + format.canonicalValueInProfileFormat]>
+						</#if>
+					</#if>
+				</#if>
+				</#list>
+				<#list canonicalList as canonical>
+					${canonical}<#if canonical?counter != canonicalList?size>,</#if>
+				</#list>
+				}
+		}<#rt>
+		<#if intention?counter != intentionsMap?keys?size>,</#if><#lt>
+		</#list>
+		<#if domain?counter != domains?size>,</#if>
+		</#list>
+	]
+}

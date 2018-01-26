@@ -1,0 +1,351 @@
+{
+	"map_enabledabstractslots": 
+	[
+		{
+			"_DOMAIN_SLOT_TO_USE": "nlu_classification.Domain",
+			"_INTENTION_SLOT_TO_USE": "nlu_classification.Intention",
+			"_MODE_SLOT_TO_USE": "nlu_classification.Mode",
+			"_ALWAYS" : 
+			[
+				"RESPONSE_INFO.actions[type=nlu_results].Input.Interpretations",
+				"RESPONSE_INFO.actions[type=nlu_results].Input.Type",
+				"RESPONSE_INFO.actions[type=nlu_results].api_version",
+				"RESPONSE_INFO.actions[type=nlu_results].contacts",
+				"nlu_interpretation_index",
+				"interpretation_confidence",
+				"intent_confidence",
+				"nlu_classification.Domain",
+				"nlu_classification.Intention",
+				"nlu_classification.Mode",
+				"nlu_classification.WARNING",
+				"RESPONSE_INFO.actions[1]",
+				"RESPONSE_INFO.actions[type=nlu_results].Instances[0].nlu_slots_validated"
+			]
+		},
+				{
+				"domain": "News",
+				"intention": "Search",
+				"slots": [
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.List-position.literal","nlu_slot_details.List-position.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Topic.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.Category.canonical" : ["arts", "breaking", "business", "economics", "education", "entertainment", "environment", "fashion", "finance", "frontpage", "health", "international", "life", "lifestyle", "local", "military", "national", "politics", "science", "society", "sports", "technology", "travel", "choice", "digital", "automobile", "history", "stock"],
+					"nlu_slot_details.List-position.canonical" : ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "all", "bottom", "last", "left", "middle", "next", "previous", "right", "top", "penultimate"]
+				}
+		}
+		,
+		{
+				"domain": "UDE",
+				"intention": "Distance",
+				"slots": [
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.Search-phrase.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Navigation",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.Contact-name.literal",
+					"nlu_slot_details.IntersectingStreet.literal",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.ParkingType.literal","nlu_slot_details.ParkingType.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.QualityModifier.literal","nlu_slot_details.QualityModifier.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Street.literal",
+					"nlu_slot_details.TrafficCategory.literal","nlu_slot_details.TrafficCategory.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.ParkingType.canonical" : ["above_ground", "covered", "customer", "employee", "family", "ground", "handicapped_parking", "large", "longterm", "manned", "motorcycle", "overnight", "park_and_drive", "park_and_fly", "park_and_ride", "parking_lots", "parking_garage", "permit_holder", "resident", "rv", "street_parking", "underground_parking", "valet", "visitor", "women_parking"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"],
+					"nlu_slot_details.QualityModifier.canonical" : ["good"],
+					"nlu_slot_details.TrafficCategory.canonical" : ["intersection"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Search",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.IntersectingStreet.literal",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.QualityModifier.literal","nlu_slot_details.QualityModifier.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Sort-by.literal","nlu_slot_details.Sort-by.canonical",
+					"nlu_slot_details.Street.literal",
+					"nlu_slot_details.TrafficCategory.literal","nlu_slot_details.TrafficCategory.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"],
+					"nlu_slot_details.Provider.canonical" : ["bestparking", "booking", "foursquare", "gasbuddy", "google", "here", "lonelyplanet", "tripadvisor", "urbanspoon", "yahoo", "yellowpages", "yelp", "zagat"],
+					"nlu_slot_details.QualityModifier.canonical" : ["good"],
+					"nlu_slot_details.Sort-by.canonical" : ["price", "distance", "popularity", "quality", "cheapest", "most_expensive"],
+					"nlu_slot_details.TrafficCategory.canonical" : ["intersection"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Search",
+				"mode": "GasStationFinder",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.FuelType.literal","nlu_slot_details.FuelType.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Sort-by.literal","nlu_slot_details.Sort-by.canonical",
+					"nlu_slot_details.Street.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.FuelType.canonical" : ["adBlue", "cng", "diesel", "e10", "e85", "lpg", "midgrade", "premium", "premium_diesel", "super", "super_plus", "unleaded"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"],
+					"nlu_slot_details.Provider.canonical" : ["bestparking", "booking", "foursquare", "gasbuddy", "google", "here", "lonelyplanet", "tripadvisor", "urbanspoon", "yahoo", "yellowpages", "yelp", "zagat"],
+					"nlu_slot_details.Sort-by.canonical" : ["price", "distance", "popularity", "quality", "cheapest", "most_expensive"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Search",
+				"mode": "ParkingFinder",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.Duration.literal","nlu_slot_details.Duration.canonical",
+					"nlu_slot_details.End-time.literal","nlu_slot_details.End-time.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.ParkingType.literal","nlu_slot_details.ParkingType.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Sort-by.literal","nlu_slot_details.Sort-by.canonical",
+					"nlu_slot_details.Street.literal",
+					"nlu_slot_details.Time.literal","nlu_slot_details.Time.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.ParkingType.canonical" : ["above_ground", "covered", "customer", "employee", "family", "ground", "handicapped_parking", "large", "longterm", "manned", "motorcycle", "overnight", "park_and_drive", "park_and_fly", "park_and_ride", "parking_lots", "parking_garage", "permit_holder", "resident", "rv", "street_parking", "underground_parking", "valet", "visitor", "women_parking"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap", "free"],
+					"nlu_slot_details.Provider.canonical" : ["bestparking", "booking", "foursquare", "gasbuddy", "google", "here", "lonelyplanet", "tripadvisor", "urbanspoon", "yahoo", "yellowpages", "yelp", "zagat"],
+					"nlu_slot_details.Sort-by.canonical" : ["price", "distance", "popularity", "quality", "cheapest", "most_expensive"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Search",
+				"mode": "Traffic",
+				"slots": [
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.Direction.literal",
+					"nlu_slot_details.DirectionReference.literal","nlu_slot_details.DirectionReference.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationCategory.literal","nlu_slot_details.LocationCategory.canonical",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Origin.literal",
+					"nlu_slot_details.Street.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.DirectionReference.canonical" : ["along_route", "another_place", "city_center", "coming_up", "destination", "east", "home", "nearby", "north", "northwest", "northeast", "south", "southwest", "southeast", "there", "west", "work"],
+					"nlu_slot_details.LocationCategory.canonical" : ["ring_road", "thoroughfare", "crossing", "onramp", "offramp"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "city_center", "coming_up", "destination", "east", "home", "nearby", "north", "northwest", "northeast", "south", "southwest", "southeast", "there", "west", "work"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "ShowOnMap",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.IntersectingStreet.literal",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.ParkingType.literal","nlu_slot_details.ParkingType.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.QualityModifier.literal","nlu_slot_details.QualityModifier.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Sort-by.literal","nlu_slot_details.Sort-by.canonical",
+					"nlu_slot_details.Street.literal",
+					"nlu_slot_details.TrafficCategory.literal","nlu_slot_details.TrafficCategory.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.ParkingType.canonical" : ["above_ground", "covered", "customer", "employee", "family", "ground", "handicapped_parking", "large", "longterm", "manned", "motorcycle", "overnight", "park_and_drive", "park_and_fly", "park_and_ride", "parking_lots", "parking_garage", "permit_holder", "resident", "rv", "street_parking", "underground_parking", "valet", "visitor", "women_parking"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"],
+					"nlu_slot_details.QualityModifier.canonical" : ["good"],
+					"nlu_slot_details.Sort-by.canonical" : ["price", "distance", "popularity", "quality", "cheapest", "most_expensive"],
+					"nlu_slot_details.TrafficCategory.canonical" : ["intersection"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Time",
+				"mode": "Traffic",
+				"slots": [
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.Direction.literal",
+					"nlu_slot_details.DirectionReference.literal","nlu_slot_details.DirectionReference.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationCategory.literal","nlu_slot_details.LocationCategory.canonical",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Origin.literal",
+					"nlu_slot_details.Street.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.DirectionReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.LocationCategory.canonical" : ["ring_road", "thoroughfare", "crossing", "onramp", "offramp"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "destination", "home", "nearby", "there", "waypoint", "work"]
+				}
+		},
+		{
+				"domain": "UDE",
+				"intention": "Unspecified",
+				"slots": [
+					"nlu_slot_details.Amenity.literal","nlu_slot_details.Amenity.canonical",
+					"nlu_slot_details.Anchor.literal","nlu_slot_details.Anchor.canonical",
+					"nlu_slot_details.BuildingNum.literal",
+					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
+					"nlu_slot_details.City.literal",
+					"nlu_slot_details.FuelType.literal","nlu_slot_details.FuelType.canonical",
+					"nlu_slot_details.IntersectingStreet.literal",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Name.literal",
+					"nlu_slot_details.Open.literal","nlu_slot_details.Open.canonical",
+					"nlu_slot_details.ParkingType.literal","nlu_slot_details.ParkingType.canonical",
+					"nlu_slot_details.PaymentType.literal","nlu_slot_details.PaymentType.canonical",
+					"nlu_slot_details.Popularity.literal","nlu_slot_details.Popularity.canonical",
+					"nlu_slot_details.PriceModifier.literal","nlu_slot_details.PriceModifier.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.QualityModifier.literal","nlu_slot_details.QualityModifier.canonical",
+					"nlu_slot_details.Search-phrase.literal",
+					"nlu_slot_details.Sort-by.literal","nlu_slot_details.Sort-by.canonical",
+					"nlu_slot_details.Street.literal",
+					"nlu_slot_details.TrafficCategory.literal","nlu_slot_details.TrafficCategory.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Amenity.canonical" : ["bike_storage_rack", "air_pump", "charging_station", "atm", "baby_change_room", "car_camping_area", "car_wash", "bike_storage_rack", "car_camping_area", "convenience_store", "elevator", "charging_station", "food", "food_for_here", "grocery_store", "repair_shop", "sell_alcohol", "shower", "toilet", "charging_station", "gate", "lighting_device", "toilet", "wifi", "master", "visa"],
+					"nlu_slot_details.FuelType.canonical" : ["adBlue", "cng", "diesel", "e10", "e85", "lpg", "midgrade", "premium", "premium_diesel", "super", "super_plus", "unleaded"],
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Open.canonical" : ["open"],
+					"nlu_slot_details.ParkingType.canonical" : ["above_ground", "covered", "customer", "employee", "family", "ground", "handicapped_parking", "large", "longterm", "manned", "motorcycle", "overnight", "park_and_drive", "park_and_fly", "park_and_ride", "parking_lots", "parking_garage", "permit_holder", "resident", "rv", "street_parking", "underground_parking", "valet", "visitor", "women_parking"],
+					"nlu_slot_details.PaymentType.canonical" : ["american_express", "bill", "barclay", "cash", "coin", "credit_card", "debit_card", "discover", "ec_card", "master", "visa"],
+					"nlu_slot_details.Popularity.canonical" : ["popular"],
+					"nlu_slot_details.PriceModifier.canonical" : ["cheap"],
+					"nlu_slot_details.Provider.canonical" : ["bestparking", "booking", "foursquare", "gasbuddy", "google", "here", "lonelyplanet", "tripadvisor", "urbanspoon", "yahoo", "yellowpages", "yelp", "zagat"],
+					"nlu_slot_details.QualityModifier.canonical" : ["good"],
+					"nlu_slot_details.Sort-by.canonical" : ["price", "distance", "popularity", "quality", "cheapest", "most_expensive"],
+					"nlu_slot_details.TrafficCategory.canonical" : ["intersection"]
+				}
+		}
+		,
+		{
+				"domain": "Unsupported",
+				"intention": "Unsupported",
+				"slots": [
+					"nlu_slot_details.Search-phrase.literal"
+				],
+				"canonicals": {
+				}
+		}
+		,
+		{
+				"domain": "Weather",
+				"intention": "Search",
+				"slots": [
+					"nlu_slot_details.Date.literal","nlu_slot_details.Date.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
+					"nlu_slot_details.Time.literal","nlu_slot_details.Time.canonical",
+					"nlu_slot_details.Weather-condition.literal","nlu_slot_details.Weather-condition.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
+					"nlu_slot_details.Weather-condition.canonical" : ["warm", "cold", "cloudy", "snow", "rain", "sunny", "hail", "icy", "air_quality", "ski_condition"]
+				}
+		}
+		
+	]
+}

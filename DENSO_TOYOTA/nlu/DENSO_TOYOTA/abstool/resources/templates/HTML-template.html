@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Abstract Slots</title>
+<style>
+body{
+	font-family: Arial,sans-serif;
+	
+}
+
+hr{
+	height: 1px;
+	border: 0;
+	background-color: #575454;
+}
+
+h1{
+	font-weight: normal;
+	font-size: 40px;			
+	color: #33CC33;
+}
+
+h2{
+	margin-top:25px;
+	margin-bottom:15px;
+	font-weight: normal;
+	color: #2586BA;
+	font-size: 30px;
+}
+
+h3{
+	font-size: 25px;
+	font-weight: normal;
+	margin-bottom: 2px;
+	padding-bottom: 10px;
+	margin-left: 25px;
+	margin-top: 0px;
+}
+
+h3.marked {
+	color: #2586BA;
+}
+
+h4 {
+	font-size: 23px;
+	font-weight: normal;
+	margin-bottom: 2px;
+	padding-bottom: 10px;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+
+h5{
+	font-weight: normal;
+	font-size: 19px;
+	margin-top: 2px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	color: #2586BA;
+	margin-left: 50px;
+}
+
+.normaltext{
+	margin-left: 50px;
+	margin-right: 100px;
+}
+
+.headertext{
+	margin-left: 25px;
+	margin-right: 50px;
+}
+
+
+
+table{
+    padding: 0;
+    margin: 0px;
+    border-collapse: collapse;
+	margin-left: 70px;
+	width: 900px;
+}
+
+td, th {
+	border: 1px solid silver;
+	padding: 10px;
+	margin: 10px;
+	font-weight: normal;
+}
+
+th.firstRowCell {
+	font-weight: bold;
+	text-align: center;
+}
+
+th.light_grey_cell {
+	background-color: #EFEFEF;
+}
+
+th.firstRowCell.fixedWidth {
+	width: 120px;
+}
+
+tr, td, th, tbody, thead, tfoot, table {
+	page-break-inside: avoid;
+}
+
+td.no_content_cell {
+	background-color: #EFEFEF;
+}
+
+td.project_col{
+	min-width: 350px;
+}
+
+
+/*  the below color makes <th> much three-dimentional, but when converting to pdf, it doesn't look nice
+	
+	background: -webkit-linear-gradient(white, #E6E6E6); 
+  	background: -o-linear-gradient(white, #E6E6E6); 
+  	background: -moz-linear-gradient(white, #E6E6E6); 
+  	background: linear-gradient(white, #E6E6E6); 
+*/
+
+
+th {
+	background-color: #E6E6E6;
+	text-align: left;
+}
+
+a#home{
+	color: #575454;
+	text-decoration: none;
+	text-shadow: 1px 1px silver;
+}
+
+a#home:hover{
+	color: #7D7A7A;
+	text-shadow: 2px 2px gray;
+}
+
+p.extra_info{
+	font-size: 13px;
+}
+div#extra_info{
+	padding-left: 15px;
+	font-size: 13px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid silver;
+	background-color: #eee;
+	max-width: 850px;
+	background: url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") repeat-x scroll 50% top #eee;
+}
+
+h2#profiles_hd{
+	display: inline-block;
+}
+
+ul.profile_action_menu{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.beside_logo{
+	margin-left: 50px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.name_text{
+	color: #2586BA; 
+}
+
+.profile_action_menu li{
+	padding-left: 15px;
+}
+
+.profile_action_menu{
+	border-radius:4px;
+	width: 110px;
+	font-size: 15px;
+	color: #1c94c4;
+	font-weight: bold;
+}
+
+.profile_action_menu a, .profile_action_menu li ul li span {
+	display: block;
+	height: 25px;
+	width: 150px;
+	line-height: 25px;
+	padding: 1px 8px;
+	color: #1c94c4;
+}
+.profile_action_menu li ul li span {
+	color: silver;
+}
+
+.profile_action_menu li ul{
+	box-shadow: 2px 2px 2px #888888;
+}
+	
+.profile_action_menu li ul li {
+	border-bottom: 1px solid silver;
+	padding: 0px;
+	margin: 0px;
+}
+
+.expand-icon{
+	cursor: pointer;
+}
+
+.black_bold_font {
+	color: black;
+	display:inline;
+	font-weight: bold;
+}
+
+div.project_name{
+	display: inline-block;
+	width: 200px;
+}
+
+a.jstree-anchor{
+	color: #2586BA;
+}
+
+a.jstree-disabled{
+	color: silver;
+}
+
+img{
+	float: right;
+	height: 80px;
+	width: 140px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+}
+
+hr.next_page {
+	page-break-after: always;
+}
+
+.next_page {
+	page-break-after: always;
+}
+
+@media next_page {
+    html, body {
+        height: 99%;    
+    }
+}
+
+p#regular_expression{
+	margin-left: 70px;
+	margin-right: 200px;
+	font-size: 15px;
+	font-weight: lighter;
+	font-family: "Courier New";
+}
+
+
+.bold_font {
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+	
+  <h1>1 Abstract Slots</h1>
+  <#if customizedHTML??>
+	<#if customizedHTML.contentBeginningAbstractSlot??>
+		<div class="normaltext">
+		${customizedHTML.contentBeginningAbstractSlot}
+		</div>
+	</#if>
+  </#if>
+  
+  <div class="normaltext">
+  <font color="red">
+  This section describes the possible domains, intentions and slots that are available from NCS cloud. The examples shown are to give an idea of the possible functionality and may not necessarily work in your specific project. Feature availablility depends on the configuration of your project along with the <i>clientstate</i> provided in the client request. Note all domains, intentions and slots mentioned in this document may not be available in all languages. English examples are shown in this document for brievity, when possible. For examples from other languages, please contact your Nuance representative.
+  </font>
+  <p/>
+ 
+  <font color="red">Note that only slots that are documented here should be utilized. At times, undocumented slots may appear in the results from the system. These are experimental, not guaranteed to be accurate and subject to change. They should not be utilized.</font><p/>
+ 
+  The format of the abstract slots is as follows. Please see <b>Abstract NLU format [1]</b> documentation for more details.
+  
+  </div>
+    <br/>
+    <table><tr><td>
+    <pre>
+    actions": [
+        {
+            "Input": "…",
+            "Instances": [ 
+               {
+                   "nlu_classification" : {
+                       "Domain" : "…",
+                       "Intention" : "…",
+                       "Mode" : "…"
+                    },
+                    nlu_slot_details" : {
+                       "&lt;slot_key&gt;" : "…",
+                    }
+                },
+                 … 
+            ],
+            "type": "nlu_results"
+        }
+        …
+    ]
+    </pre>
+    </td></tr></table>
+    <br/>
+    <div class="next_page"></div>
+  
+  <#assign domains = domainContent?keys>
+  <#list domains as domain>
+  
+  
+  <H3 class="marked"><a name="${domain.domainName}">1.${domain?counter} Domain: ${domain.domainName}</a></H3>
+    <#if customizedHTML??>
+		<#assign content = customizedHTML.getContentPerSection(domain.domainName)! >
+		<#if content??>
+			<div class="normaltext">
+			${content}<br/>
+			</div>
+		</#if>
+	</#if>
+	<H4>Available slots</H4>
+	<table>
+		<tr>
+			<th rowspan=2 class="firstRowCell">Slot Key</th><th rowspan=2 class="firstRowCell">Description</th><th rowspan=2 class="firstRowCell">Canonical Format</th><th colspan=2 style="text-align:center" class="firstRowCell">Example</th>
+		</tr>
+		<tr>
+			<th class="firstRowCell">Literal</th><th class="firstRowCell">Canonical</th>
+		</tr>
+		
+		<#assign slotsOptions = domainContent?values[domain_index].slotsOptions>
+		<#assign slotsOptionsKeys = []>
+		<#assign slotsOptionsValues = []>
+		<#assign availableSlots = domainContent?values[domain_index].availableSlots>
+		<#list availableSlots as availableSlot> 
+		
+		<#if availableSlot.slotKey != "">
+		
+			<tr><td><a name="${domain.domainName}__${availableSlot.slotKey}">${availableSlot.slotKey}
+			<#if slotsOptions[availableSlot.slotKey]??>
+				<#assign options = slotsOptions[availableSlot.slotKey]>
+				<#list options as option>
+					<#if option.isHTMLOption == true>
+						<#if slotsOptionsKeys?seq_contains(option.key) == true>
+							<sup>${slotsOptionsKeys?seq_index_of(option.key) + 1}</sup>
+						<#else>
+							<#assign slotsOptionsKeys = slotsOptionsKeys + [option.key]>
+							<#assign slotsOptionsValues = slotsOptionsValues + [option.value]>
+							<sup>${slotsOptionsKeys?seq_index_of(option.key) + 1}</sup>
+						</#if>
+					</#if>
+				</#list>
+			</#if>
+			</a></td><td>${availableSlot.description}</td><td>
+			<#if availableSlot.canonicalFormat??>
+			<a href="#APDX_${availableSlot.canonicalFormat.canonicalKey}">${availableSlot.canonicalFormat.canonicalKey}</a>
+			</#if>
+			</td><td>${availableSlot.literalExample}</td><td>${availableSlot.canonicalExample}</td></tr>
+		</#if> 
+		
+		</#list>
+		
+	</table>
+	<br/>
+	<#list slotsOptionsValues as optionValue>
+		<div class="normaltext">note: slot marked with <sup>${optionValue?counter}</sup> indicates ${optionValue}</div>
+	</#list>
+	
+	<hr width=80%>
+	<br/>
+	
+	<H4>Types of intentions</H4>
+	
+	<#assign intentionsMap = domainContent?values[domain_index].intentionsContent>
+	<#list intentionsMap?keys as intention>
+	<#if intention.mode??>
+		<H5><a name="${domain.domainName}_${intention.intentionName}_${intention.mode}"><div class="black_bold_font">/</div> ${intention.intentionName} (Mode: ${intention.mode})</a></H5>
+	<#else>
+		<H5><a name="${domain.domainName}_${intention.intentionName}"><div class="black_bold_font">/</div> ${intention.intentionName}</a></H5>
+	</#if>
+	<div class="normaltext">${intention.description}</div>
+	<#if customizedHTML??>
+		<#if intention.mode??>
+			<#assign content = customizedHTML.getContentPerSection(domain.domainName, intention.intentionName, intention.mode)! >
+			<#if content??>
+				<div class="normaltext">
+				${content}<br/>
+				</div>
+			</#if>
+		<#else>
+			<#assign content = customizedHTML.getContentPerSection(domain.domainName, intention.intentionName)! >
+			<#if content??>
+				<div class="normaltext">
+				${content}<br/>
+				</div>
+			</#if>
+		</#if>
+	</#if>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+	<#assign intentionContent = intentionsMap?values[intention_index]>
+	<#assign intentionAbstractSlots = intentionContent.slotsList>
+	<#assign intentionSemanticSignatures = intentionContent.signaturesList>
+	<#assign intentionLanguageExampleMap = intentionContent.languageExampleMap>
+	<#list intentionAbstractSlots as intentionAbstractSlot>
+		<#if intentionAbstractSlot.slotKey != "">
+			<#if intentionAbstractSlot?counter == intentionAbstractSlots?size>
+				<a href="#${domain.domainName}__${intentionAbstractSlot.slotKey}">&lt;${intentionAbstractSlot.slotKey}&gt;</a>
+			<#else>
+				<a href="#${domain.domainName}__${intentionAbstractSlot.slotKey}">&lt;${intentionAbstractSlot.slotKey}&gt;</a> + 
+			</#if>	
+		</#if> 
+	</#list>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<#list intentionSemanticSignatures as intentionSemanticSignature>
+	<#assign semanticSignatureKey = intentionSemanticSignature.semanticSignatureKey>
+	<#assign slotsList = intentionSemanticSignature.abstractSlotsList>
+	<#assign examplesList = intentionLanguageExampleMap[semanticSignatureKey]>
+	<tr>
+	<#assign languageNames = examplesList?keys>
+	<#assign spanNumber = 0>
+	<#list languageNames as languageName>
+		<#assign lanuageExampleSet = examplesList[languageName]>
+		<#assign spanNumber = spanNumber + lanuageExampleSet?size>
+	</#list>
+	<th class="light_grey_cell" rowspan=${spanNumber} title=${semanticSignatureKey}>
+	<#list slotsList as slot>
+		<#if slot != "">
+			<#if slot?counter == slotsList?size>
+				<a href="#${domain.domainName}__${slot.slotKey}">&lt;${slot.slotKey}&gt;</a>
+			
+			<#else>
+				<a href="#${domain.domainName}__${slot.slotKey}">&lt;${slot.slotKey}&gt;</a> +
+			
+			</#if>
+		<#else>
+			&lt;no slots&gt;
+		</#if> 	
+	</#list>
+	<#list languageNames as languageName>
+		<#assign languageExampleSet = examplesList[languageName]>
+		<#if languageName?index == 0>
+			<#list languageExampleSet as languageExample>
+				<#if languageExample?counter == 1>
+					<td rowspan="${languageExampleSet?size}">&lt;${languageName}&gt;</td><td title=${languageExample.languageKey}>${languageExample.example}</td></th>
+				<#else>
+					<tr><td title=${languageExample.languageKey}>${languageExample.example}</td></tr>
+				</#if>
+			</#list>
+		<#else>
+			<#list languageExampleSet as languageExample>
+				<#if languageExample?counter == 1>
+					<tr><td rowspan="${languageExampleSet?size}">&lt;${languageName}&gt;</td><td title=${languageExample.languageKey}>${languageExample.example}</td></tr>
+				<#else>
+					<tr><td title=${languageExample.languageKey}>${languageExample.example}</td></tr>
+				</#if>
+			</#list>
+		</#if>
+	</#list>
+	</tr>
+	</#list>
+	</table>
+	<#if intentionsMap?keys?size != intention?counter>
+		<br/><br/>
+	</#if>
+	</#list>
+	<div class="next_page"></div>
+	</#list>
+	
+	<H1>2 Appendix</H1>
+	
+	<H3 class="marked"><a name="Appendix-Canonical">3.1 Canonical Formats & Values</a></H3>
+	<table>
+	<tr><th class="firstRowCell">Canonical name</th><th class="firstRowCell">Canonical values</th></tr>
+	
+	<#list availableCanonicalFormat?keys as canonicalKey>
+		<#if canonicalKey != "">
+			<tr><th class="light_grey_cell"><a name="APDX_${canonicalKey}">${canonicalKey}</a></th><td>${availableCanonicalFormat[canonicalKey]}
+			
+			<#if canonicalKey == "Date">
+				<div class="bold_font">(<a href="#Appendix-Canonical-Date">details and examples</a> or refer to section 3.2)</div>
+			</#if>
+			
+			<#if canonicalKey == "Time">
+				<div class="bold_font">(<a href="#Appendix-Canonical-Time">deails and examples</a> or refer to section 3.3)</div>
+			</#if>
+			
+			</td></tr>
+		</#if>
+		
+	</#list>
+	
+	
+	</table class="light_grey_cell">
+	<div class="next_page"></div>
+	
+	<H3 class="marked"><a name="Appendix-Canonical-Date">3.2 &lt;Date&gt; Specification & Example</a></H3>
+	<div class="normaltext">
+	<p>The date is in a String with a specific syntax. The date includes one or more attribute-value pairs covering absolute and or relative date information:</p>
+	<p id="regular_expression">__multientity__;min-entities=1;dayNum=((0)?[1-9]|[12][0-9]|3[01]);weekday=(monday|tuesday|wednesday|thursday|friday|saturday|sunday);month=(january|february|march|april|may|june|july|august|september|october|november|december);year=[0-9]{4};d=(-)?[0-9]+;w=(-)?[0-9]+;m=(-)?[0-9]+;y=(-)?[0-9]+;weekend=(-)?[0-9]+;modifierWeek=(first|second|third|fourth|last|beginning|end);modifierMonth=(first|second|third|fourth|last|beginning|end);</p>
+	<p>Multiple attribute-value pairs are separated by space &#8220; &#8221;.</p>
+	<p>The following are attributes with absolute values:</p>
+	<ul style="list-style-type:disc">
+		
+		<li>dayNum</li>
+		<ul style="list-style-type:circle">
+			<li>Models the date number in a month; proper values are {01...09,10...19,20...29,30..31}</li>
+			<li>Example: &#8220;dayNum=11&#8221; for the 11th of the month</li>
+		</ul>
+		<li>weekday</li>
+		<ul style="list-style-type:circle">
+			<li>Models the day of the week</li>
+			<li>Example: &#8220;weekday=monday&#8221; to indicate Monday</li>
+		</ul>
+		<li>month</li>
+		<ul style="list-style-type:circle">
+			<li>Models the month</li>
+			<li>Example: &#8220;month=october&#8221; to indicate October, &#8220;dayNum=23 month=november&#8221; to indicate November 23</li>
+		</ul>
+		<li>year</li>
+		<ul style="list-style-type:circle">
+			<li>Models the year as a four-digit number</li>
+			<li>Example: &#8220;year=2014&#8221; to indicate the year 2014</li>
+		</ul>
+	</ul>
+	<p>The following are attributes with relative values</p>
+	<ul style="list-style-type:disc">
+		
+		<li>d</li>
+		<ul style="list-style-type:circle">
+			<li>Relative day, minus for past, (implicit) plus for future, with a range of -/+ 0-9 days. 0 is today. </li>
+			<li>Example: &#8220;d=2&#8221; indicates the day after tomorrow, &#8220;d=-1&#8221; indicates yesterday</li>
+		</ul>
+		<li>w</li>
+		<ul style="list-style-type:circle">
+			<li>Relative week, minus for past, (implicit) plus for future, with a range of -/+ 0-9 weeks. 0 is this week. </li>
+			<li>Example: &#8220;w=2&#8221; indicates two weeks from now, &#8220;w=-1&#8221; indicates last week</li>
+		</ul>
+		<li>weekend</li>
+		<ul style="list-style-type:circle">
+			<li>Relative weekend, minus for past, (implicit) plus for future, with a range of -/+ 0-9 weekends. 0 is this weekend. </li>
+			<li>Example: &#8220;w=1&#8221; indicates next weekend, &#8220;w=-1&#8221; indicates last weekend</li>
+		</ul>
+		<li>m</li>
+		<ul style="list-style-type:circle">
+			<li>Relative month, minus for past, (implicit) plus for future, with a range of -/+ 0-9 months. 0 is this month. </li>
+			<li>Example: &#8220;m=1&#8221; indicates next month, &#8220;m=-1&#8221; indicates last month</li>
+		</ul>
+		<li>y</li>
+		<ul style="list-style-type:circle">
+			<li>Relative year, minus for past, (implicit) plus for future, with a range of -/+ 0-9 years. 0 is this year. </li>
+			<li>Example: &#8220;y=2&#8221; indicates in two years from now, &#8220;y=-1&#8221; indicates last year</li>
+		</ul>
+		<li>modifierWeek</li>
+		<ul style="list-style-type:circle">
+			<li>Explicit qualifier of the week, possible values are {first|second|third|fourth|last|beginning|end}</li>
+			<li>Example: &#8220;modifierWeek=last&#8221; indicates last week, &#8220;modifierWeek=beginning&#8221; is beginning of the week, &#8220;modifierWeek=beginning w=1&#8221; indicates the beginning of next week</li>
+		</ul>
+		<li>modifierMonth</li>
+		<ul style="list-style-type:circle">
+			<li>Explicit qualifier of the month, possible values are {first|second|third|fourth|last|beginning|end}</li>
+			<li>Example: &#8220;modifierMonth=last&#8221; indicates last month, &#8220;modifierMonth=beginning&#8221; is beginning of the month, &#8220;modifierMonth=beginning m=1&#8221; indicates the beginning of next month</li>
+		</ul>
+	</ul>
+	<p>Example:</p>
+	<table>
+	<tr><th class="firstRowCell">Date</th><th class="firstRowCell">Meaning</th></tr>
+	<tr><td>dayNum=23 month=november</td><td>November, 23</td></tr>
+	<tr><td>dayNum=11 month=october year=2014</td><td>October 11, 2014</td></tr>
+	<tr><td>modifierWeek=beginning m=1</td><td>beginning of next month</td></tr>
+	</table>
+	</div>
+	<div class="next_page"></div>
+	
+	
+	<H3 class="marked"><a name="Appendix-Canonical-Time">3.3 &lt;Time&gt; Specification & Example</a></H3>
+	<div class="normaltext">
+	<p>The time is in a String with a specific syntax:</p>
+	<p id="regular_expression">(\+[0-9][0-9]:[0-9][0-9]:[0-9][0-9]|(2[0-3]|[0-1][0-9])[:?][0-5][0-9](:[0-5][0-9])?)|morning|afternoon|evening|night</p>
+	<p>The time may yield a value in a time range or in one of four periods of the day: morning, afternoon, evening, night.</p>
+
+	<p>The time range is from &#8220;00:00&#8221; to &#8220;23:59&#8221;</p>
+	<p>If there is a question mark (?) between the hour and minute digits, there is no resolution of AM/PM. This must be interpreted at the client level.</p>
+	<p>If a leading plus (+) is added in front, this refers to a relative time in the future compared with the current time. The absence of the plus refers to an absolute time during the day. The range of the future time is from &#8220;00:00:00&#8221; to &#8220;99:99:99&#8221;</p>
+	<p>Example:</p>
+	<table>
+	<tr><th class="firstRowCell">Date</th><th class="firstRowCell">Meaning</th></tr>
+	<tr><td>06:00</td><td>6:00 AM</td></tr>
+	<tr><td>18:00</td><td>6:00 PM</td></tr>
+	<tr><td>06?00</td><td>6 o&#8217;clock (with no reference to AM or PM)</td></tr>
+	<tr><td>+08:00:00</td><td>8 hours in the future based on the current time</td></tr>
+	<tr><td>evening</td><td>Evening time period</td></tr>
+	</table>
+	</div>
+	<div class="next_page"></div>
+	
+	
+	
+	
+	<H1><a name="References">3 References</a></H1>
+	<div class="normaltext">
+	<p><div style="font-family:'courier';"><b>[1] Garrick Ing, <i>Abstract NLU Format version 6</i>, May 2016.</b></div></p>
+	</div>
+	
+	<#if customizedHTML??>
+		<#assign content = customizedHTML.getContentAtEnd()! >
+		<#if content??>
+			<div class="next_page"></div>
+			${content}
+		</#if>
+	</#if>
+
+</body>
+</html>

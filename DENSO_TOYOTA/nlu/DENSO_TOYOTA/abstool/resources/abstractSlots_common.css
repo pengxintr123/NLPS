@@ -1,0 +1,261 @@
+body{
+	font-family: Arial,sans-serif;
+	
+}
+
+hr{
+	height: 1px;
+	border: 0;
+	background-color: #575454;
+}
+
+h1{
+	font-weight: normal;
+	font-size: 40px;			
+	color: #33CC33;
+}
+
+h2{
+	margin-top:25px;
+	margin-bottom:15px;
+	font-weight: normal;
+	color: #2586BA;
+	font-size: 30px;
+}
+
+h3{
+	font-size: 25px;
+	font-weight: normal;
+	margin-bottom: 2px;
+	padding-bottom: 10px;
+	margin-left: 25px;
+	margin-top: 0px;
+}
+
+h3.marked {
+	color: #2586BA;
+}
+
+h4 {
+	font-size: 23px;
+	font-weight: normal;
+	margin-bottom: 2px;
+	padding-bottom: 10px;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+
+h5{
+	font-weight: normal;
+	font-size: 19px;
+	margin-top: 2px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	color: #2586BA;
+	margin-left: 50px;
+}
+
+.normaltext{
+	margin-left: 50px;
+	margin-right: 100px;
+}
+
+.headertext{
+	margin-left: 25px;
+	margin-right: 50px;
+}
+
+
+
+table{
+    padding: 0;
+    margin: 0px;
+    border-collapse: collapse;
+	margin-left: 70px;
+	width: 900px;
+}
+
+td, th {
+	border: 1px solid silver;
+	padding: 10px;
+	margin: 10px;
+	font-weight: normal;
+}
+
+th.firstRowCell {
+	font-weight: bold;
+	text-align: center;
+}
+
+th.light_grey_cell {
+	background-color: #EFEFEF;
+}
+
+th.firstRowCell.fixedWidth {
+	width: 120px;
+}
+
+tr, td, th, tbody, thead, tfoot, table {
+	page-break-inside: avoid;
+}
+
+td.no_content_cell {
+	background-color: #EFEFEF;
+}
+
+td.project_col{
+	min-width: 350px;
+}
+
+
+/*  the below color makes <th> much three-dimentional, but when converting to pdf, it doesn't look nice
+	
+	background: -webkit-linear-gradient(white, #E6E6E6); 
+  	background: -o-linear-gradient(white, #E6E6E6); 
+  	background: -moz-linear-gradient(white, #E6E6E6); 
+  	background: linear-gradient(white, #E6E6E6); 
+*/
+
+
+th {
+	background-color: #E6E6E6;
+	text-align: left;
+}
+
+a#home{
+	color: #575454;
+	text-decoration: none;
+	text-shadow: 1px 1px silver;
+}
+
+a#home:hover{
+	color: #7D7A7A;
+	text-shadow: 2px 2px gray;
+}
+
+p.extra_info{
+	font-size: 13px;
+}
+div#extra_info{
+	padding-left: 15px;
+	font-size: 13px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid silver;
+	background-color: #eee;
+	max-width: 850px;
+	background: url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") repeat-x scroll 50% top #eee;
+}
+
+h2#profiles_hd{
+	display: inline-block;
+}
+
+ul.profile_action_menu{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.beside_logo{
+	margin-left: 50px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.name_text{
+	color: #2586BA; 
+}
+
+.profile_action_menu li{
+	padding-left: 15px;
+}
+
+.profile_action_menu{
+	border-radius:4px;
+	width: 110px;
+	font-size: 15px;
+	color: #1c94c4;
+	font-weight: bold;
+}
+
+.profile_action_menu a, .profile_action_menu li ul li span {
+	display: block;
+	height: 25px;
+	width: 150px;
+	line-height: 25px;
+	padding: 1px 8px;
+	color: #1c94c4;
+}
+.profile_action_menu li ul li span {
+	color: silver;
+}
+
+.profile_action_menu li ul{
+	box-shadow: 2px 2px 2px #888888;
+}
+	
+.profile_action_menu li ul li {
+	border-bottom: 1px solid silver;
+	padding: 0px;
+	margin: 0px;
+}
+
+.expand-icon{
+	cursor: pointer;
+}
+
+.black_bold_font {
+	color: black;
+	display:inline;
+	font-weight: bold;
+}
+
+div.project_name{
+	display: inline-block;
+	width: 200px;
+}
+
+a.jstree-anchor{
+	color: #2586BA;
+}
+
+a.jstree-disabled{
+	color: silver;
+}
+
+img{
+	float: right;
+	height: 80px;
+	width: 140px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+}
+
+hr.next_page {
+	page-break-after: always;
+}
+
+.next_page {
+	page-break-after: always;
+}
+
+@media next_page {
+    html, body {
+        height: 99%;    
+    }
+}
+
+p#regular_expression{
+	margin-left: 70px;
+	margin-right: 200px;
+	font-size: 15px;
+	font-weight: lighter;
+	font-family: "Courier New";
+}
+
+
+.bold_font {
+	font-weight: bold;
+}

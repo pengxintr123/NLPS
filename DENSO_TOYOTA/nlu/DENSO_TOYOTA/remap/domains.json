@@ -1,0 +1,8 @@
+{
+  "domains" : {
+		"News": ["Search"],
+		"UDE": ["Distance","Navigation","Search","Search::GasStationFinder","Search::ParkingFinder","Search::Traffic","ShowOnMap","Time::Traffic","Unspecified"],
+		"Unsupported": ["Unsupported"],
+		"Weather": ["Search"]
+  }
+}
