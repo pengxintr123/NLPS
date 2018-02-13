@@ -313,7 +313,7 @@ p#regular_expression{
   
   
   
-  <H3 class="marked"><a name="News">1.1 Domain: News</a></H3>
+  <H3 class="marked"><a name="Music">1.1 Domain: Music</a></H3>
 			<div class="normaltext">
 			<br/>
 			</div>
@@ -330,36 +330,48 @@ p#regular_expression{
 		
 		
 		
-			<tr><td><a name="News__Category">Category
-			</a></td><td>News category</td><td>
-			<a href="#APDX_News Category">News Category</a>
-			</td><td>Automobile</td><td>automobile</td></tr>
+			<tr><td><a name="Music__Album">Album
+			</a></td><td>Album</td><td>
+			</td><td>Aquarium</td><td></td></tr>
 		
 		
 		
-			<tr><td><a name="News__List-position">List-position
-			</a></td><td>Selection of a particular news item from the available list</td><td>
-			<a href="#APDX_Position">Position</a>
-			</td><td>Last</td><td>last</td></tr>
+			<tr><td><a name="Music__Artist">Artist
+			</a></td><td>Artist</td><td>
+			</td><td>Aqua</td><td></td></tr>
 		
 		
 		
-			<tr><td><a name="News__Provider">Provider
-			</a></td><td>News provider</td><td>
-			<a href="#APDX_News Provider">News Provider</a>
-			</td><td>BBC</td><td>bbc</td></tr>
+			<tr><td><a name="Music__Genre">Genre
+			</a></td><td>Genre</td><td>
+			<a href="#APDX_Genre">Genre</a>
+			</td><td>Rock</td><td>Rock</td></tr>
 		
 		
 		
-			<tr><td><a name="News__Search-phrase">Search-phrase
-			</a></td><td>Query phrased which can be used in a news search engine</td><td>
-			</td><td>Barack Obama</td><td></td></tr>
+			<tr><td><a name="Music__Location">Location
+			</a></td><td>Location</td><td>
+			</td><td>Boston</td><td></td></tr>
 		
 		
 		
-			<tr><td><a name="News__Topic">Topic
-			</a></td><td>News topic</td><td>
-			</td><td>Earthquake</td><td></td></tr>
+			<tr><td><a name="Music__Mood">Mood
+			</a></td><td>Mood</td><td>
+			<a href="#APDX_Mood">Mood</a>
+			</td><td>Romantic</td><td>romantic</td></tr>
+		
+		
+		
+			<tr><td><a name="Music__Provider">Provider
+			</a></td><td>Music providers</td><td>
+			<a href="#APDX_Music Provider (Music domain only)">Music Provider (Music domain only)</a>
+			</td><td>Tunein</td><td>tunein</td></tr>
+		
+		
+		
+			<tr><td><a name="Music__Title">Title
+			</a></td><td>Title of the song</td><td>
+			</td><td>Barbie girl</td><td></td></tr>
 		
 		
 	</table>
@@ -370,8 +382,8 @@ p#regular_expression{
 	
 	<H4>Types of intentions</H4>
 	
-		<H5><a name="News_Search"><div class="black_bold_font">/</div> Search</a></H5>
-	<div class="normaltext">Search for news</div>
+		<H5><a name="Music_Play"><div class="black_bold_font">/</div> Play</a></H5>
+	<div class="normaltext">Play music</div>
 				<div class="normaltext">
 				<br/>
 				</div>
@@ -380,11 +392,13 @@ p#regular_expression{
 	<table>
 	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
 
-				<a href="#News__Category">&lt;Category&gt;</a> + 
-				<a href="#News__List-position">&lt;List-position&gt;</a> + 
-				<a href="#News__Provider">&lt;Provider&gt;</a> + 
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> + 
-				<a href="#News__Topic">&lt;Topic&gt;</a>
+				<a href="#Music__Album">&lt;Album&gt;</a> + 
+				<a href="#Music__Artist">&lt;Artist&gt;</a> + 
+				<a href="#Music__Genre">&lt;Genre&gt;</a> + 
+				<a href="#Music__Location">&lt;Location&gt;</a> + 
+				<a href="#Music__Mood">&lt;Mood&gt;</a> + 
+				<a href="#Music__Provider">&lt;Provider&gt;</a> + 
+				<a href="#Music__Title">&lt;Title&gt;</a>
 	
 	</td></tr>
 	</table>
@@ -393,106 +407,644 @@ p#regular_expression{
 	<table>
 	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS006>
-				<a href="#News__">&lt;&gt;</a>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS001>
+				<a href="#Music__">&lt;&gt;</a>
 			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS006.eng-USA_1>Search for news</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS001.eng-USA_1>Play</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS007>
-				<a href="#News__List-position">&lt;List-position&gt;</a>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS005>
+				<a href="#Music__Album">&lt;Album&gt;</a>
 			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS007.eng-USA_1>Show me the next article</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS005.eng-USA_1>Play the album Surfing with the Alien</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS004>
-				<a href="#News__Provider">&lt;Provider&gt;</a>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS004>
+				<a href="#Music__Artist">&lt;Artist&gt;</a>
 			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS004.eng-USA_1>Read news from the Washington Post</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS004.eng-USA_1>Play music by the artist Joe Satriani</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS008>
-				<a href="#News__List-position">&lt;List-position&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS002>
+				<a href="#Music__Genre">&lt;Genre&gt;</a>
 			
-				<a href="#News__Provider">&lt;Provider&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS008.eng-USA_1>Show me the previous article from the New York Times</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS002.eng-USA_1>Play rock music</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS001>
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS023>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
 			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS001.eng-USA_1>Read me news about the earthquake</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS023.eng-USA_1>Play dramatic music</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS002>
-				<a href="#News__Category">&lt;Category&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS003>
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
-			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS002.eng-USA_1>Read me technology news from India</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS003.eng-USA_1>Play rock</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS009>
-				<a href="#News__List-position">&lt;List-position&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS007>
+				<a href="#Music__Title">&lt;Title&gt;</a>
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
-			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS009.eng-USA_1>Show me the next article about the earthquake</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS007.eng-USA_1>Play the song Flying in a Blue Dream</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS003>
-				<a href="#News__Provider">&lt;Provider&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS006>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
+				<a href="#Music__Artist">&lt;Artist&gt;</a>
 			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS003.eng-USA_1>Read me news about India from ABC News</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS006.eng-USA_1>Play the album Surfing with the Alien by Joe Satriani</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS010>
-				<a href="#News__Category">&lt;Category&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS011>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
 			
-				<a href="#News__List-position">&lt;List-position&gt;</a> +
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
-			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS010.eng-USA_1>Show me the next sports article</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS011.eng-USA_1>Play the album Surfing with the Alien on spotify</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS005>
-				<a href="#News__Category">&lt;Category&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS008>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
 			
-				<a href="#News__Provider">&lt;Provider&gt;</a> +
+				<a href="#Music__Title">&lt;Title&gt;</a>
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
-			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS005.eng-USA_1>Read technology news in the New York Times</td></th>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS008.eng-USA_1>Play the song Crazy from the album Time Machine</td></th>
 	</tr>
 	<tr>
-	<th class="light_grey_cell" rowspan=1 title=News.Search.SS011>
-				<a href="#News__Category">&lt;Category&gt;</a> +
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS010>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
 			
-				<a href="#News__List-position">&lt;List-position&gt;</a> +
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
 			
-				<a href="#News__Provider">&lt;Provider&gt;</a> +
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS010.eng-USA_1>Play music by Joe Satriani on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS020>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
 			
-				<a href="#News__Search-phrase">&lt;Search-phrase&gt;</a> +
+				<a href="#Music__Title">&lt;Title&gt;</a>
 			
-				<a href="#News__Topic">&lt;Topic&gt;</a>
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS020.eng-USA_1>Play the song Paradise by Coldplay</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS022>
+				<a href="#Music__Genre">&lt;Genre&gt;</a> +
 			
-					<td rowspan="1">&lt;US English&gt;</td><td title=News.Search.SS011.eng-USA_1>I want the next breaking news about Paris from the New York Times</td></th>
+				<a href="#Music__Location">&lt;Location&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS022.eng-USA_1>I want to listen to jazz music from New Orleans</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS019>
+				<a href="#Music__Genre">&lt;Genre&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS019.eng-USA_1>Play rock music on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS013>
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS013.eng-USA_1>Play the song Let It Be on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS012>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS012.eng-USA_1>Play the album Goodbye Yellow Brick Road by Elton John on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS009>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS009.eng-USA_1>Play the song Crazy from the album Time Machine by Joe Satriani</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS014>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS014.eng-USA_1>Play the song Crazy from the album Time Machine on radio.net</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS021>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS021.eng-USA_1>Play the song Paradise by Coldplay on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play.SS015>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play.SS015.eng-USA_1>On spotify play the song Crazy from the album Time Machine by Joe Satriani</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Play_Album"><div class="black_bold_font">/</div> Play (Mode: Album)</a></H5>
+	<div class="normaltext">Play an album</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play_Album.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play_Album.SS001.eng-USA_1>Please play a romantic album</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Play_Artist"><div class="black_bold_font">/</div> Play (Mode: Artist)</a></H5>
+	<div class="normaltext">Play an artist</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play_Artist.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play_Artist.SS001.eng-USA_1>Please play a romantic band</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Play_Song"><div class="black_bold_font">/</div> Play (Mode: Song)</a></H5>
+	<div class="normaltext">Play a song</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Play_Song.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Play_Song.SS001.eng-USA_1>Can you play some aggressive songs</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Search"><div class="black_bold_font">/</div> Search</a></H5>
+	<div class="normaltext">Search for music</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Album">&lt;Album&gt;</a> + 
+				<a href="#Music__Artist">&lt;Artist&gt;</a> + 
+				<a href="#Music__Genre">&lt;Genre&gt;</a> + 
+				<a href="#Music__Location">&lt;Location&gt;</a> + 
+				<a href="#Music__Mood">&lt;Mood&gt;</a> + 
+				<a href="#Music__Provider">&lt;Provider&gt;</a> + 
+				<a href="#Music__Title">&lt;Title&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS004>
+				<a href="#Music__Album">&lt;Album&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS004.eng-USA_1>Search for the album Surfing with the Alien</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS003>
+				<a href="#Music__Artist">&lt;Artist&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS003.eng-USA_1>Search for the artist Joe Satriani</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS001>
+				<a href="#Music__Genre">&lt;Genre&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS001.eng-USA_1>Search for rock music</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS020>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS020.eng-USA_1>Search for a relaxing music</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS002>
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS002.eng-USA_1>Search for music on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS006>
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS006.eng-USA_1>Search for the song Flying in a Blue Dream</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS005>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS005.eng-USA_1>Search for the album Surfing with the Alien by Joe Satriani</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS010>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS010.eng-USA_1>Search for the album Surfing with the Alien on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS007>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS007.eng-USA_1>Search for the song Crazy from the album Time Machine</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS009>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS009.eng-USA_1>Search for the artist Joe Satriani on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS017>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS017.eng-USA_1>Search for the song Paradise by Coldplay</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS019>
+				<a href="#Music__Genre">&lt;Genre&gt;</a> +
+			
+				<a href="#Music__Location">&lt;Location&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS019.eng-USA_1>Find jazz music from New Orleans music</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS016>
+				<a href="#Music__Genre">&lt;Genre&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS016.eng-USA_1>Find some rock music on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS012>
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS012.eng-USA_1>Search for the song Let It Be on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS011>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS011.eng-USA_1>Search for the album Goodbye Yellow Brick Road by Elton John on spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS008>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS008.eng-USA_1>Search for the song Crazy from the album Time Machine by Joe Satriani</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS013>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS013.eng-USA_1>Search for the song Crazy from the album Time Machine on radio.net</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS018>
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS018.eng-USA_1>Search for the song Paradise by Coldplay on pandora</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search.SS014>
+				<a href="#Music__Album">&lt;Album&gt;</a> +
+			
+				<a href="#Music__Artist">&lt;Artist&gt;</a> +
+			
+				<a href="#Music__Provider">&lt;Provider&gt;</a> +
+			
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search.SS014.eng-USA_1>On spotify search for the song Crazy from the album Time Machine by Joe Satriani</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Search_Album"><div class="black_bold_font">/</div> Search (Mode: Album)</a></H5>
+	<div class="normaltext">Search for an album</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search_Album.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search_Album.SS001.eng-USA_1>Please find me a romantic album</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Search_Artist"><div class="black_bold_font">/</div> Search (Mode: Artist)</a></H5>
+	<div class="normaltext">Search for an artist</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search_Artist.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search_Artist.SS001.eng-USA_1>Find an energetic band</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Search_Song"><div class="black_bold_font">/</div> Search (Mode: Song)</a></H5>
+	<div class="normaltext">Search for a song</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Search_Song.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Search_Song.SS001.eng-USA_1>Search for aggressive songs</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Unspecified"><div class="black_bold_font">/</div> Unspecified</a></H5>
+	<div class="normaltext">Unspecified action on music</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Album">&lt;Album&gt;</a> + 
+				<a href="#Music__Artist">&lt;Artist&gt;</a> + 
+				<a href="#Music__Genre">&lt;Genre&gt;</a> + 
+				<a href="#Music__Location">&lt;Location&gt;</a> + 
+				<a href="#Music__Mood">&lt;Mood&gt;</a> + 
+				<a href="#Music__Provider">&lt;Provider&gt;</a> + 
+				<a href="#Music__Title">&lt;Title&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS002>
+				<a href="#Music__Album">&lt;Album&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS002.eng-USA_1>Something from the album Time Machine</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS001>
+				<a href="#Music__Artist">&lt;Artist&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS001.eng-USA_1>Something from the singer Joe Satriani</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS005>
+				<a href="#Music__Genre">&lt;Genre&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS005.eng-USA_1>Some rock music</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS007>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS007.eng-USA_1>Relaxing music</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS004>
+				<a href="#Music__Provider">&lt;Provider&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS004.eng-USA_1>Something from spotify</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS003>
+				<a href="#Music__Title">&lt;Title&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS003.eng-USA_1>The song Knocking on Heaven's Door</td></th>
+	</tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified.SS006>
+				<a href="#Music__Genre">&lt;Genre&gt;</a> +
+			
+				<a href="#Music__Location">&lt;Location&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified.SS006.eng-USA_1>Jazz music from New Orleans music</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Unspecified_Album"><div class="black_bold_font">/</div> Unspecified (Mode: Album)</a></H5>
+	<div class="normaltext">Unspecified action for an album</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified_Album.SS01>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified_Album.SS01.eng-USA_1>Aggressive albums</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Unspecified_Artist"><div class="black_bold_font">/</div> Unspecified (Mode: Artist)</a></H5>
+	<div class="normaltext">Unspecified action for an artist</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified_Artist.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified_Artist.SS001.eng-USA_1>Romantic bands</td></th>
+	</tr>
+	</table>
+		<br/><br/>
+		<H5><a name="Music_Unspecified_Song"><div class="black_bold_font">/</div> Unspecified (Mode: Song)</a></H5>
+	<div class="normaltext">Unspecified action for a song</div>
+				<div class="normaltext">
+				<br/>
+				</div>
+	<br/>
+	
+	<table>
+	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
+
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+	
+	</td></tr>
+	</table>
+	</br>
+	
+	<table>
+	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
+	<tr>
+	<th class="light_grey_cell" rowspan=1 title=Music.Unspecified_Song.SS001>
+				<a href="#Music__Mood">&lt;Mood&gt;</a>
+			
+					<td rowspan="1">&lt;US English&gt;</td><td title=Music.Unspecified_Song.SS001.eng-USA_1>Relaxing songs</td></th>
 	</tr>
 	</table>
 	<div class="next_page"></div>
@@ -5500,176 +6052,6 @@ p#regular_expression{
 	</tr>
 	</table>
 	<div class="next_page"></div>
-  
-  
-  <H3 class="marked"><a name="Weather">1.4 Domain: Weather</a></H3>
-			<div class="normaltext">
-			<br/>
-			</div>
-	<H4>Available slots</H4>
-	<table>
-		<tr>
-			<th rowspan=2 class="firstRowCell">Slot Key</th><th rowspan=2 class="firstRowCell">Description</th><th rowspan=2 class="firstRowCell">Canonical Format</th><th colspan=2 style="text-align:center" class="firstRowCell">Example</th>
-		</tr>
-		<tr>
-			<th class="firstRowCell">Literal</th><th class="firstRowCell">Canonical</th>
-		</tr>
-		
-		
-		
-		
-		
-			<tr><td><a name="Weather__Date">Date
-			</a></td><td>Date</td><td>
-			<a href="#APDX_Date">Date</a>
-			</td><td>Tomorrow</td><td>d=1</td></tr>
-		
-		
-		
-			<tr><td><a name="Weather__Location">Location
-			</a></td><td>Geographical location</td><td>
-			</td><td>Paris</td><td></td></tr>
-		
-		
-		
-			<tr><td><a name="Weather__LocationReference">LocationReference
-			</a></td><td>Location reference of the business</td><td>
-			<a href="#APDX_Location Reference">Location Reference</a>
-			</td><td>My destination</td><td>destination</td></tr>
-		
-		
-		
-			<tr><td><a name="Weather__Time">Time
-			</a></td><td>Time of day</td><td>
-			<a href="#APDX_Time">Time</a>
-			</td><td>8 PM</td><td>20:00</td></tr>
-		
-		
-		
-			<tr><td><a name="Weather__Weather-condition">Weather-condition
-			</a></td><td>Weather condition</td><td>
-			<a href="#APDX_Weather Condition">Weather Condition</a>
-			</td><td>Raining</td><td>rain</td></tr>
-		
-		
-	</table>
-	<br/>
-	
-	<hr width=80%>
-	<br/>
-	
-	<H4>Types of intentions</H4>
-	
-		<H5><a name="Weather_Search"><div class="black_bold_font">/</div> Search</a></H5>
-	<div class="normaltext">Find weather information</div>
-				<div class="normaltext">
-				<br/>
-				</div>
-	<br/>
-	
-	<table>
-	<tr><th class="firstRowCell fixedWidth">Slots Summary</th><td>
-
-				<a href="#Weather__Date">&lt;Date&gt;</a> + 
-				<a href="#Weather__Location">&lt;Location&gt;</a> + 
-				<a href="#Weather__LocationReference">&lt;LocationReference&gt;</a> + 
-				<a href="#Weather__Time">&lt;Time&gt;</a> + 
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-	
-	</td></tr>
-	</table>
-	</br>
-	
-	<table>
-	<tr><th class="firstRowCell">Supported Semantic Signatures</th><th class="firstRowCell">Language</th><th class="firstRowCell">Examples</th></tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS001>
-				<a href="#Weather__">&lt;&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS001.eng-USA_1>What's the weather</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS002>
-				<a href="#Weather__Date">&lt;Date&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS002.eng-USA_1>What's the weather on Tuesday</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS004>
-				<a href="#Weather__Location">&lt;Location&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS004.eng-USA_1>What's the weather in Paris</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS008>
-				<a href="#Weather__LocationReference">&lt;LocationReference&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS008.eng-USA_1>What's the weather along my route</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS010>
-				<a href="#Weather__Time">&lt;Time&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS010.eng-USA_1>What is the weather tonight</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS005>
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS005.eng-USA_1>Will it rain</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS009>
-				<a href="#Weather__Date">&lt;Date&gt;</a> +
-			
-				<a href="#Weather__Location">&lt;Location&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS009.eng-USA_1>What's the weather in Paris on Tuesday</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS003>
-				<a href="#Weather__Date">&lt;Date&gt;</a> +
-			
-				<a href="#Weather__Time">&lt;Time&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS003.eng-USA_1>What's the weather like tomorrow morning</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS012>
-				<a href="#Weather__Date">&lt;Date&gt;</a> +
-			
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS012.eng-USA_1>Will it rain tomorrow</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS006>
-				<a href="#Weather__Location">&lt;Location&gt;</a> +
-			
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS006.eng-USA_1>Is it going to snow in Paris</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS011>
-				<a href="#Weather__Time">&lt;Time&gt;</a> +
-			
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS011.eng-USA_1>Will it snow this afternoon</td></th>
-	</tr>
-	<tr>
-	<th class="light_grey_cell" rowspan=1 title=Weather.Search.SS007>
-				<a href="#Weather__Date">&lt;Date&gt;</a> +
-			
-				<a href="#Weather__Location">&lt;Location&gt;</a> +
-			
-				<a href="#Weather__Weather-condition">&lt;Weather-condition&gt;</a>
-			
-					<td rowspan="1">&lt;US English&gt;</td><td title=Weather.Search.SS007.eng-USA_1>Will it rain in Paris today</td></th>
-	</tr>
-	</table>
-	<div class="next_page"></div>
 	
 	<H1>2 Appendix</H1>
 	
@@ -5695,13 +6077,6 @@ p#regular_expression{
 			
 			</td></tr>
 		
-			<tr><th class="light_grey_cell"><a name="APDX_Date">Date</a></th><td>__multientity__;min-entities=1;dayNum=((0)?[1-9]|[12][0-9]|3[01]);weekday=(monday|tuesday|wednesday|thursday|friday|saturday|sunday);month=(january|february|march|april|may|june|july|august|september|october|november|december);year=[0-9]{4};d=(-)?[0-9]+;w=(-)?[0-9]+;m=(-)?[0-9]+;y=(-)?[0-9]+;weekend=(-)?[0-9]+;modifierWeek=(first|second|third|fourth|last|beginning|end);modifierMonth=(first|second|third|fourth|last|beginning|end);calendarType=(lunar|holiday)
-			
-				<div class="bold_font">(<a href="#Appendix-Canonical-Date">details and examples</a> or refer to section 3.2)</div>
-			
-			
-			</td></tr>
-		
 			<tr><th class="light_grey_cell"><a name="APDX_Duration">Duration</a></th><td>(-+)?[0-8][0-9]:[0-9][0-9]:[0-9][0-9]
 			
 			
@@ -5709,6 +6084,12 @@ p#regular_expression{
 			</td></tr>
 		
 			<tr><th class="light_grey_cell"><a name="APDX_Fuel Type">Fuel Type</a></th><td>adBlue \ cng \ diesel \ e10 \ e85 \ lpg \ midgrade \ premium \ premium_diesel \ super \ super_plus \ unleaded
+			
+			
+			
+			</td></tr>
+		
+			<tr><th class="light_grey_cell"><a name="APDX_Genre">Genre</a></th><td>acoustic \ alternative \ blues \ childrens \ christmas \ classical \ classical \ country \ disco \ easy listening \ electronic \ folk \ hip-hop \ jazz \ latin \ metal \ oldies \ pop \ punk \ r&b \ reggae \ religious \ rock \ soul; This set is not a closed list. For other possible values other than core canonical values listed here, please contact your Nuance representative.
 			
 			
 			
@@ -5744,13 +6125,13 @@ p#regular_expression{
 			
 			</td></tr>
 		
-			<tr><th class="light_grey_cell"><a name="APDX_News Category">News Category</a></th><td>arts \ breaking \ business \ economics \ education \ entertainment \ environment \ fashion \ finance \ frontpage \ health \ international \ life \ lifestyle \ local \ military \ national \ politics \ science \ society \ sports \ technology \ travel \ choice \ digital \ automobile \ history \ stock
+			<tr><th class="light_grey_cell"><a name="APDX_Mood">Mood</a></th><td>aggressive \ dramatic \ energetic \ happy \ relaxing \ romantic
 			
 			
 			
 			</td></tr>
 		
-			<tr><th class="light_grey_cell"><a name="APDX_News Provider">News Provider</a></th><td>baidu \ bbc \ googlenews \ huffingtonpost.com \ news.yahoo.com \ npr.org \ reuters.com \ weibo.com; This is a sample list of the 2000+ values that is supported. For a complete list, please contact your Nuance representative.
+			<tr><th class="light_grey_cell"><a name="APDX_Music Provider (Music domain only)">Music Provider (Music domain only)</a></th><td>amazon_music \ deezer \ grooveshark \ iheartradio \ internetradio \ lastfm \ pandora \ spotify \ tunein \ tidal \ slacker \ aupeo \ radio.net \ siriusxm \ ximalaya
 			
 			
 			
@@ -5775,12 +6156,6 @@ p#regular_expression{
 			</td></tr>
 		
 			<tr><th class="light_grey_cell"><a name="APDX_Popularity">Popularity</a></th><td>popular
-			
-			
-			
-			</td></tr>
-		
-			<tr><th class="light_grey_cell"><a name="APDX_Position">Position</a></th><td>1st \ 2nd \ 3rd \ 4th \ 5th \ 6th \ 7th \ 8th \ 9th \ 10th \ 11th \ 12th \ 13th \ 14th \ 15th \ 16th \ 17th \ 18th \ 19th \ 20th \ 21st \ 22nd \ 23rd \ 24th \ 25th \ 26th \ 27th \ 28th \ 29th \ 30th \ all \ bottom \ last \ left \ middle \ next \ previous \ right \ top \ penultimate
 			
 			
 			
@@ -5824,12 +6199,6 @@ p#regular_expression{
 			</td></tr>
 		
 			<tr><th class="light_grey_cell"><a name="APDX_UDE Service Provider">UDE Service Provider</a></th><td>bestparking \ booking \ foursquare \ gasbuddy \ google \ here \ lonelyplanet \ tripadvisor \ urbanspoon \ yahoo \ yellowpages \ yelp \ zagat
-			
-			
-			
-			</td></tr>
-		
-			<tr><th class="light_grey_cell"><a name="APDX_Weather Condition">Weather Condition</a></th><td>warm \ cold \ cloudy \ snow \ rain \ sunny \ hail \ icy \ air_quality \ ski_condition
 			
 			
 			

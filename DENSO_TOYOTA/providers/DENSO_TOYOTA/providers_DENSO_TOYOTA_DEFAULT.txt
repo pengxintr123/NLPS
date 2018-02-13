@@ -1,5 +1,16 @@
 //Domain	Intention	TARGETED_CONTENT_PROVIDERS
-News	Search	NA
+Music	Play	NA
+Music	Play::Album	NA
+Music	Play::Artist	NA
+Music	Play::Song	NA
+Music	Search	NA
+Music	Search::Album	NA
+Music	Search::Artist	NA
+Music	Search::Song	NA
+Music	Unspecified	NA
+Music	Unspecified::Album	NA
+Music	Unspecified::Artist	NA
+Music	Unspecified::Song	NA
 UDE	Distance	NA
 UDE	Navigation	NA
 UDE	Search	NA
@@ -10,4 +21,3 @@ UDE	ShowOnMap	NA
 UDE	Time::Traffic	NA
 UDE	Unspecified	NA
 Unsupported	Unsupported	NA
-Weather	Search	NA

@@ -1,8 +1,7 @@
 {
   "domains" : {
-		"News": ["Search"],
+		"Music": ["Play","Play::Album","Play::Artist","Play::Song","Search","Search::Album","Search::Artist","Search::Song","Unspecified","Unspecified::Album","Unspecified::Artist","Unspecified::Song"],
 		"UDE": ["Distance","Navigation","Search","Search::GasStationFinder","Search::ParkingFinder","Search::Traffic","ShowOnMap","Time::Traffic","Unspecified"],
-		"Unsupported": ["Unsupported"],
-		"Weather": ["Search"]
+		"Unsupported": ["Unsupported"]
   }
 }

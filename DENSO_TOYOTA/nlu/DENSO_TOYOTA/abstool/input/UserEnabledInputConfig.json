@@ -3,11 +3,11 @@
 	"nlps_release" : "6.4.300",
 	"domain_list" : [
 		{
-			"domain" : "News",
+			"domain" : "Music",
 			"release_available_as_of": "6.1.200",
 			"intentions" : [
 				{
-					"intention" : "Search",
+					"intention" : "Play",
 					"release_available_as_of": "6.1.200",
 					"abstract_slots" : [
 						{
@@ -15,24 +15,199 @@
 							"release_available_as_of": "6.1.200"
 						},
 						{
-							"slotKey": "Category",
-							"release_available_as_of": "6.4.300"
+							"slotKey": "Album",
+							"release_available_as_of": "6.1.200"
 						},
 						{
-							"slotKey": "List-position",
+							"slotKey": "Artist",
 							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Genre",
+							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Location",
+							"release_available_as_of": "6.3.200"
+						},
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
 						},
 						{
 							"slotKey": "Provider",
-							"release_available_as_of": "6.3.100"
+							"release_available_as_of": "6.4.300"
 						},
 						{
-							"slotKey": "Search-phrase",
+							"slotKey": "Title",
+							"release_available_as_of": "6.1.200"
+						}
+					]
+				},
+				{
+					"intention" : "Play",
+					"mode": "Album",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Play",
+					"mode": "Artist",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Play",
+					"mode": "Song",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Search",
+					"release_available_as_of": "6.1.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Album",
 							"release_available_as_of": "6.1.200"
 						},
 						{
-							"slotKey": "Topic",
+							"slotKey": "Artist",
 							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Genre",
+							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Location",
+							"release_available_as_of": "6.3.200"
+						},
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						},
+						{
+							"slotKey": "Provider",
+							"release_available_as_of": "6.4.300"
+						},
+						{
+							"slotKey": "Title",
+							"release_available_as_of": "6.1.200"
+						}
+					]
+				},
+				{
+					"intention" : "Search",
+					"mode": "Album",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Search",
+					"mode": "Artist",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Search",
+					"mode": "Song",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Unspecified",
+					"release_available_as_of": "6.1.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Album",
+							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Artist",
+							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Genre",
+							"release_available_as_of": "6.1.200"
+						},
+						{
+							"slotKey": "Location",
+							"release_available_as_of": "6.3.200"
+						},
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						},
+						{
+							"slotKey": "Provider",
+							"release_available_as_of": "6.4.300"
+						},
+						{
+							"slotKey": "Title",
+							"release_available_as_of": "6.1.200"
+						}
+					]
+				},
+				{
+					"intention" : "Unspecified",
+					"mode": "Album",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Unspecified",
+					"mode": "Artist",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
+						}
+					]
+				},
+				{
+					"intention" : "Unspecified",
+					"mode": "Song",
+					"release_available_as_of": "6.3.200",
+					"abstract_slots" : [
+						{
+							"slotKey": "Mood",
+							"release_available_as_of": "6.3.200"
 						}
 					]
 				}
@@ -677,42 +852,6 @@
 						{
 							"slotKey": "Search-phrase",
 							"release_available_as_of": "6.1.200"
-						}
-					]
-				}
-			]
-		},
-		{
-			"domain" : "Weather",
-			"release_available_as_of": "6.1.200",
-			"intentions" : [
-				{
-					"intention" : "Search",
-					"release_available_as_of": "6.1.200",
-					"abstract_slots" : [
-						{
-							"slotKey": "",
-							"release_available_as_of": "6.1.200"
-						},
-						{
-							"slotKey": "Date",
-							"release_available_as_of": "6.1.200"
-						},
-						{
-							"slotKey": "Location",
-							"release_available_as_of": "6.1.200"
-						},
-						{
-							"slotKey": "LocationReference",
-							"release_available_as_of": "6.4.300"
-						},
-						{
-							"slotKey": "Time",
-							"release_available_as_of": "6.1.200"
-						},
-						{
-							"slotKey": "Weather-condition",
-							"release_available_as_of": "6.3.200"
 						}
 					]
 				}

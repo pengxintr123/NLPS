@@ -23,18 +23,153 @@
 			]
 		},
 				{
-				"domain": "News",
-				"intention": "Search",
+				"domain": "Music",
+				"intention": "Play",
 				"slots": [
-					"nlu_slot_details.Category.literal","nlu_slot_details.Category.canonical",
-					"nlu_slot_details.List-position.literal","nlu_slot_details.List-position.canonical",
+					"nlu_slot_details.Album.literal",
+					"nlu_slot_details.Artist.literal",
+					"nlu_slot_details.Genre.literal","nlu_slot_details.Genre.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical",
 					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
-					"nlu_slot_details.Search-phrase.literal",
-					"nlu_slot_details.Topic.literal"
+					"nlu_slot_details.Title.literal"
 				],
 				"canonicals": {
-					"nlu_slot_details.Category.canonical" : ["arts", "breaking", "business", "economics", "education", "entertainment", "environment", "fashion", "finance", "frontpage", "health", "international", "life", "lifestyle", "local", "military", "national", "politics", "science", "society", "sports", "technology", "travel", "choice", "digital", "automobile", "history", "stock"],
-					"nlu_slot_details.List-position.canonical" : ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "all", "bottom", "last", "left", "middle", "next", "previous", "right", "top", "penultimate"]
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"],
+					"nlu_slot_details.Provider.canonical" : ["amazon_music", "deezer", "grooveshark", "iheartradio", "internetradio", "lastfm", "pandora", "spotify", "tunein", "tidal", "slacker", "aupeo", "radio.net", "siriusxm", "ximalaya"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Play",
+				"mode": "Album",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Play",
+				"mode": "Artist",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Play",
+				"mode": "Song",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Search",
+				"slots": [
+					"nlu_slot_details.Album.literal",
+					"nlu_slot_details.Artist.literal",
+					"nlu_slot_details.Genre.literal","nlu_slot_details.Genre.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.Title.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"],
+					"nlu_slot_details.Provider.canonical" : ["amazon_music", "deezer", "grooveshark", "iheartradio", "internetradio", "lastfm", "pandora", "spotify", "tunein", "tidal", "slacker", "aupeo", "radio.net", "siriusxm", "ximalaya"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Search",
+				"mode": "Album",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Search",
+				"mode": "Artist",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Search",
+				"mode": "Song",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Unspecified",
+				"slots": [
+					"nlu_slot_details.Album.literal",
+					"nlu_slot_details.Artist.literal",
+					"nlu_slot_details.Genre.literal","nlu_slot_details.Genre.canonical",
+					"nlu_slot_details.Location.literal",
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical",
+					"nlu_slot_details.Provider.literal","nlu_slot_details.Provider.canonical",
+					"nlu_slot_details.Title.literal"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"],
+					"nlu_slot_details.Provider.canonical" : ["amazon_music", "deezer", "grooveshark", "iheartradio", "internetradio", "lastfm", "pandora", "spotify", "tunein", "tidal", "slacker", "aupeo", "radio.net", "siriusxm", "ximalaya"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Unspecified",
+				"mode": "Album",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Unspecified",
+				"mode": "Artist",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
+				}
+		},
+		{
+				"domain": "Music",
+				"intention": "Unspecified",
+				"mode": "Song",
+				"slots": [
+					"nlu_slot_details.Mood.literal","nlu_slot_details.Mood.canonical"
+				],
+				"canonicals": {
+					"nlu_slot_details.Mood.canonical" : ["aggressive", "dramatic", "energetic", "happy", "relaxing", "romantic"]
 				}
 		}
 		,
@@ -328,22 +463,6 @@
 					"nlu_slot_details.Search-phrase.literal"
 				],
 				"canonicals": {
-				}
-		}
-		,
-		{
-				"domain": "Weather",
-				"intention": "Search",
-				"slots": [
-					"nlu_slot_details.Date.literal","nlu_slot_details.Date.canonical",
-					"nlu_slot_details.Location.literal",
-					"nlu_slot_details.LocationReference.literal","nlu_slot_details.LocationReference.canonical",
-					"nlu_slot_details.Time.literal","nlu_slot_details.Time.canonical",
-					"nlu_slot_details.Weather-condition.literal","nlu_slot_details.Weather-condition.canonical"
-				],
-				"canonicals": {
-					"nlu_slot_details.LocationReference.canonical" : ["along_route", "another_place", "coming_up", "city_center", "closest", "current", "destination", "home", "nearby", "there", "waypoint", "work"],
-					"nlu_slot_details.Weather-condition.canonical" : ["warm", "cold", "cloudy", "snow", "rain", "sunny", "hail", "icy", "air_quality", "ski_condition"]
 				}
 		}
 		

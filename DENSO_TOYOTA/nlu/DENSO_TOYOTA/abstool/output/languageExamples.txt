@@ -1,14 +1,58 @@
-Read me news about the earthquake
-Read me technology news from India
-Read me news about India from ABC News
-Read news from the Washington Post
-Read technology news in the New York Times
-Search for news
-Show me the next article
-Show me the previous article from the New York Times
-Show me the next article about the earthquake
-Show me the next sports article
-I want the next breaking news about Paris from the New York Times
+Play
+Play rock music
+Play rock
+Play music by the artist Joe Satriani
+Play the album Surfing with the Alien
+Play the album Surfing with the Alien by Joe Satriani
+Play the song Flying in a Blue Dream
+Play the song Crazy from the album Time Machine
+Play the song Crazy from the album Time Machine by Joe Satriani
+Play music by Joe Satriani on pandora
+Play the album Surfing with the Alien on spotify
+Play the album Goodbye Yellow Brick Road by Elton John on spotify
+Play the song Let It Be on spotify
+Play the song Crazy from the album Time Machine on radio.net
+On spotify play the song Crazy from the album Time Machine by Joe Satriani
+Play rock music on pandora
+Play the song Paradise by Coldplay
+Play the song Paradise by Coldplay on pandora
+I want to listen to jazz music from New Orleans
+Play dramatic music
+Please play a romantic album
+Please play a romantic band
+Can you play some aggressive songs
+Search for rock music
+Search for music on spotify
+Search for the artist Joe Satriani
+Search for the album Surfing with the Alien
+Search for the album Surfing with the Alien by Joe Satriani
+Search for the song Flying in a Blue Dream
+Search for the song Crazy from the album Time Machine
+Search for the song Crazy from the album Time Machine by Joe Satriani
+Search for the artist Joe Satriani on pandora
+Search for the album Surfing with the Alien on spotify
+Search for the album Goodbye Yellow Brick Road by Elton John on spotify
+Search for the song Let It Be on spotify
+Search for the song Crazy from the album Time Machine on radio.net
+On spotify search for the song Crazy from the album Time Machine by Joe Satriani
+Find some rock music on pandora
+Search for the song Paradise by Coldplay
+Search for the song Paradise by Coldplay on pandora
+Find jazz music from New Orleans music
+Search for a relaxing music
+Please find me a romantic album
+Find an energetic band
+Search for aggressive songs
+Something from the singer Joe Satriani
+Something from the album Time Machine
+The song Knocking on Heaven's Door
+Something from spotify
+Some rock music
+Jazz music from New Orleans music
+Relaxing music
+Aggressive albums
+Romantic bands
+Relaxing songs
 Distance to Madison
 Distance to destination
 How far is it from the Walgreens at my destination
@@ -416,15 +460,3 @@ Wall Street
 One with e85
 Ones that have covered parking
 Any utterance that is not supported by the system
-What's the weather
-What's the weather on Tuesday
-What's the weather like tomorrow morning
-What's the weather in Paris
-Will it rain
-Is it going to snow in Paris
-Will it rain in Paris today
-What's the weather along my route
-What's the weather in Paris on Tuesday
-What is the weather tonight
-Will it snow this afternoon
-Will it rain tomorrow
